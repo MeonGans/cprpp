@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class Member extends Model
+{
+    use SoftDeletes;
+
+    /**
+     * Атрибути, які можна масово назначати.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name', 'email', 'photo', 'display', 'description'
+    ];
+}

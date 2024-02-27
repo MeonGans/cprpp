@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IT Solutions &amp; Business Services Responsive HTML5 Bootstrap5  Website Template">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- fav icon -->
+    <link rel="icon" href="http://cprpp/assets/images/fav-icon/favicon.ico">
+
+    <!-- bootstarp -->
+    <link rel="stylesheet" href="http://cprpp/css/vendors/bootstrap.min.css">
+
+    <!-- animate.css file -->
+    <link rel="stylesheet" href="http://cprpp/css/vendors/animate.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="http://cprpp/css/vendors/swiper-bundle.min.css">
+
+    <!-- flaticon -->
+    <link rel="stylesheet" href="http://cprpp/css/vendors/flaticon/flaticon.css">
+
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="http://cprpp/css/vendors/all.min.css">
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="http://cprpp/css/vendors/bootstrap-icons-1.9.1/bootstrap-icons.css">
+
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="http://cprpp/css/vendors/jquery.fancybox.min.css">
+
+    <link href="http://cprpp/editor/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- fonts site preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- fonts site preconnect -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Font Family -->
+    <!--        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&amp;display=swap">-->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;display=swap">
+    @include('layouts.main/head-css')
+    <!-- main-LTR -->
+    <link rel="stylesheet" href="http://cprpp/css/main-LTR.css">
+    <title> ЦПРПП | Головна</title>
+
+</head>
+<body class="light-theme">
