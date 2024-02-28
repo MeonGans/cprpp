@@ -38,7 +38,7 @@
                                 <h4 class="location-title">Фактична адреса</h4>
                                 <div class="line-on-side "> </div>
                                 <p class="location-address">Київська область, Бучанський район</p>
-                                <p class="location-address">Крюківщина, ліцей "Лідер", новий корпус, каб. 315</p>
+                                <p class="location-address">Крюківщина, ліцей "Лідер", новий корпус, каб. 305</p>
                                 <div class="location-card  "><i class="flaticon-email icon"></i>
                                     <div class="card-content">
                                         <h6 class="content-title">email:</h6><a class="email link" href="mailto:prppcentr@gmail.com">prppcentr@gmail.com</a>
