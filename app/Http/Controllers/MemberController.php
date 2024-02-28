@@ -36,6 +36,8 @@ class MemberController extends Controller
 
         // Отримуємо файл з запиту
         $image = $request->file('image');
+
+        dd($image);
         if($image){
             $request['photo'] = $this->uploadImage($image);
         }
@@ -76,7 +78,6 @@ class MemberController extends Controller
         // Отримуємо файл з запиту
         $image = $request->file('image');
 
-        dd($image);
         if($image){
             $request['photo'] = $this->uploadImage($image);
         }
