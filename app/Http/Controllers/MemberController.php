@@ -102,6 +102,6 @@ class MemberController extends Controller
         $imageName = time().'.'.$image->extension();
         $today = date('Y-m-d');
         $image->storeAs('public/images/members/'.$today, $imageName);
-        return env('APP_URL').'/storage/images/members/'.$today.'/'.$imageName;
+        return env('APP_URL').'storage/images/members/'.$today.'/'.$imageName;
     }
 }
