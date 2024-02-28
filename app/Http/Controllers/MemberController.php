@@ -99,7 +99,7 @@ class MemberController extends Controller
 
     private function uploadImage(array|\Illuminate\Http\UploadedFile $image)
     {
-        dd($image->extension());
+        dd($image->getError());
         $imageName = time().'.'.$image->extension();
         $today = date('Y-m-d');
         $image->storeAs('public/images/members/'.$today, $imageName);
