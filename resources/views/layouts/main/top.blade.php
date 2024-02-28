@@ -7,30 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- fav icon -->
-    <link rel="icon" href="http://cprpp/assets/images/fav-icon/favicon.ico">
+    <link rel="icon" href="{{ config('app.url') }}/assets/images/fav-icon/favicon.ico">
 
     <!-- bootstarp -->
-    <link rel="stylesheet" href="http://cprpp/css/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/vendors/bootstrap.min.css">
 
     <!-- animate.css file -->
-    <link rel="stylesheet" href="http://cprpp/css/vendors/animate.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/vendors/animate.css">
 
     <!-- Swiper -->
-    <link rel="stylesheet" href="http://cprpp/css/vendors/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/vendors/swiper-bundle.min.css">
 
     <!-- flaticon -->
-    <link rel="stylesheet" href="http://cprpp/css/vendors/flaticon/flaticon.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/vendors/flaticon/flaticon.css">
 
     <!-- fontAwesome -->
-    <link rel="stylesheet" href="http://cprpp/css/vendors/all.min.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/vendors/all.min.css">
 
     <!-- bootstrap icons -->
-    <link rel="stylesheet" href="http://cprpp/css/vendors/bootstrap-icons-1.9.1/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/vendors/bootstrap-icons-1.9.1/bootstrap-icons.css">
 
     <!-- Fancybox -->
-    <link rel="stylesheet" href="http://cprpp/css/vendors/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/vendors/jquery.fancybox.min.css">
 
-    <link href="http://cprpp/editor/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ config('app.url') }}/editor/css/froala_style.min.css" rel="stylesheet" type="text/css" />
 
     <!-- fonts site preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,7 @@
           href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;display=swap">
     @include('layouts.main/head-css')
     <!-- main-LTR -->
-    <link rel="stylesheet" href="http://cprpp/css/main-LTR.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/main-LTR.css">
     <title> ЦПРПП | Головна</title>
 
 </head>

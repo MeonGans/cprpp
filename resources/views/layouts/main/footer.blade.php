@@ -4,7 +4,7 @@
     <div class="overlay-photo-image-bg" data-bg-img="assets/images/sections-bg-images/footer-bg-1.jpg" data-bg-opacity=".25"></div>
     <div class="container">
         <div class="row footer-cols">
-            <div class="col-12 col-md-8 col-lg-4  footer-col "><img class="img-fluid footer-logo" loading="lazy" src="http://cprpp/assets/images/logo/logo-light.svg" alt="logo"/>
+            <div class="col-12 col-md-8 col-lg-4  footer-col "><img class="img-fluid footer-logo" loading="lazy" src="{{ config('app.url') }}/assets/images/logo/logo-light.svg" alt="logo"/>
                 <div class="footer-col-content-wrapper">
                     <p class="footer-text-about-us ">
                         Комунальна установа "Центр професійного розвитку педагогічних працівників" Вишневої міської ради Бучанського району Київської області
@@ -65,36 +65,36 @@
 <!-- End privacy-policy-modal-->
 
 <!--     JQuery     -->
-<script src="http://cprpp/js/vendors/jquery-3.6.1.min.js"></script>
+<script src="{{ config('app.url') }}/js/vendors/jquery-3.6.1.min.js"></script>
 
 <!--     appear     -->
-<script src="http://cprpp/js/vendors/appear.min.js"></script>
+<script src="{{ config('app.url') }}/js/vendors/appear.min.js"></script>
 
 <!--     bootstrap     -->
-<script src="http://cprpp/js/vendors/bootstrap.bundle.min.js"></script>
+<script src="{{ config('app.url') }}/js/vendors/bootstrap.bundle.min.js"></script>
 
 <!--     countTo     -->
-<script src="http://cprpp/js/vendors/jquery.countTo.js"></script>
+<script src="{{ config('app.url') }}/js/vendors/jquery.countTo.js"></script>
 
 <!--     wow     -->
 <!--        <script src="js/vendors/wow.min.js"></script>-->
 
 <!--     swiper     -->
-<script src="http://cprpp/js/vendors/swiper-bundle.min.js"></script>
+<script src="{{ config('app.url') }}/js/vendors/swiper-bundle.min.js"></script>
 
 <!--     particles     -->
-<script src="http://cprpp/js/vendors/particles.min.js"></script>
+<script src="{{ config('app.url') }}/js/vendors/particles.min.js"></script>
 
 <!--     Vanilla-tilt     -->
-<script src="http://cprpp/js/vendors/vanilla-tilt.min.js"></script>
+<script src="{{ config('app.url') }}/js/vendors/vanilla-tilt.min.js"></script>
 
 <!--     isotope     -->
-<script src="http://cprpp/js/vendors/isotope-min.js"></script>
+<script src="{{ config('app.url') }}/js/vendors/isotope-min.js"></script>
 
 <!--     fancybox     -->
-<script src="http://cprpp/js/vendors/jquery.fancybox.min.js"></script>
+<script src="{{ config('app.url') }}/js/vendors/jquery.fancybox.min.js"></script>
 
 <!--     main     -->
-<script src="http://cprpp/js/main.js"></script>
+<script src="{{ config('app.url') }}/js/main.js"></script>
 </body>
 </html>

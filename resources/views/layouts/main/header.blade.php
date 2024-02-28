@@ -10,7 +10,7 @@
 </div>
 <div class="container">
     <nav class="menu-navbar">
-        <div class="header-logo"><a class="logo-link" href="{{ route('home') }}"><img class="logo-img light-logo" loading="lazy" src="http://cprpp/assets/images/logo/logo-light.png" alt="logo"/><img class="logo-img  dark-logo" loading="lazy" src="http://cprpp/assets/images/logo/logo-dark.png" alt="logo"/></a></div>
+        <div class="header-logo"><a class="logo-link" href="{{ route('home') }}"><img class="logo-img light-logo" loading="lazy" src="{{ config('app.url') }}/assets/images/logo/logo-light.png" alt="logo"/><img class="logo-img  dark-logo" loading="lazy" src="{{ config('app.url') }}/assets/images/logo/logo-dark.png" alt="logo"/></a></div>
         <div class="links menu-wrapper ">
             <ul class="list-js links-list">
                 <li class="menu-item has-sub-menu"><a class="menu-link   active" href="#0">Про нас <i class="fas fa-plus  plus-icon"> </i></a>
