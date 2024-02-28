@@ -80,7 +80,8 @@ Route::group(['prefix' => '/admin'], function () {
         Route::get('/create', [MemberController::class, 'create'])->name('add_member');
 
         // Маршрут для збереження новоствореного працівника
-        Route::post('/member', [MemberController::class, 'store'])->name('store_member')->middleware('resizeImage');
+//        Route::post('/member', [MemberController::class, 'store'])->name('store_member')->middleware('resizeImage');
+        Route::post('/member', [MemberController::class, 'store'])->name('store_member');
 
         // Маршрут для відображення форми редагування працівника
         Route::get('/{member}/edit', [MemberController::class, 'edit'])->name('edit_member');
