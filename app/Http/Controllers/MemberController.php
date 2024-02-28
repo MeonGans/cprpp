@@ -75,6 +75,8 @@ class MemberController extends Controller
 
         // Отримуємо файл з запиту
         $image = $request->file('image');
+
+        dd($image);
         if($image){
             $request['photo'] = $this->uploadImage($image);
         }
@@ -100,6 +102,6 @@ class MemberController extends Controller
         $imageName = time().'.'.$image->extension();
         $today = date('Y-m-d');
         $image->storeAs('public/images/members/'.$today, $imageName);
-        return 'http://cprpp/storage/images/members/'.$today.'/'.$imageName;
+        return env('APP_URL').'/storage/images/members/'.$today.'/'.$imageName;
     }
 }
