@@ -17,6 +17,7 @@ class ResizeImage
      */
     public function handle(Request $request, Closure $next): Response
     {
+        try {
         $image = $request->file('image');
 
         if ($image) {
@@ -26,6 +27,11 @@ class ResizeImage
             $img->save($image->getPathname());
 
             $request->merge(['image' => $image]);
+        }
+
+        } catch (\Exception $e) {
+            // Обробити помилку, якщо вона виникне
+            dd($e->getMessage());
         }
 
         return $next($request);
