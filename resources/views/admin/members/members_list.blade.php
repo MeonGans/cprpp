@@ -38,7 +38,7 @@
                             </div>
                             <div class="">
                                 <form action="{{ route('destroy_member', $member->id) }}" method="POST">
-                                <a href="#" class="btn btn-success btn-sm me-1 tooltips mt-1" data-bs-toggle="tooltip"
+                                <a href="{{route('edit_member', $member->id)}}" class="btn btn-success btn-sm me-1 tooltips mt-1" data-bs-toggle="tooltip"
                                    data-bs-placement="top" data-bs-title="Edit"> <i class="ri-pencil-fill"></i> </a>
                                     @csrf
                                     @method('DELETE')
