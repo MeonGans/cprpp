@@ -8,7 +8,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <form method="POST" action="{{ route('update_news', $member->id) }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('update_member', $member->id) }}" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="row">
@@ -37,7 +37,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Додати</button>
+                        <button type="submit" class="btn btn-primary">Редагувати</button>
                     </form>
                 </div>
             </div>

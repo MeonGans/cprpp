@@ -85,7 +85,7 @@ class MemberController extends Controller
         Member::updated($request->all());
 
         // Повернення на сторінку зі списком новин з повідомленням про успішне створення
-        return redirect()->route('news_list')->with('success', 'Працівника успішно відредаговано!');
+        return redirect()->route('members_list')->with('success', 'Працівника успішно відредаговано!');
     }
 
     /**
