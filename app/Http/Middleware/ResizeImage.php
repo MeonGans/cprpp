@@ -29,6 +29,17 @@ class ResizeImage
             $request->merge(['image' => $image]);
         }
 
+        $image = $request->file('file');
+
+        if ($image) {
+            $manager = new ImageManager(new Driver());
+            $img = $manager->read($image);
+            $img->scale(width: 1080);
+            $img->save($image->getPathname());
+
+            $request->merge(['file' => $image]);
+        }
+
         return $next($request);
     }
 }
