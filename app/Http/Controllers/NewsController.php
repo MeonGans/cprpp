@@ -77,7 +77,10 @@ class NewsController extends Controller
     {
         $imageName = time().'.'.$image->extension();
         $today = date('Y-m-d');
-        $image->storeAs('public/images/news/'.$today, $imageName);
+        $directoryPath = 'public/images/news/'.$today;
+        $image->storeAs($directoryPath, $imageName);
+        chmod(storage_path('app/'.$directoryPath), 0777);
+
         $link = asset('storage/images/news/'.$today.'/'.$imageName);
         return $link;
     }
