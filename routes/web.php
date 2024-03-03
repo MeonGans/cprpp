@@ -30,7 +30,7 @@ Route::get('/events', [HomeController::class, 'contact'])->name('events');
 
 Route::group(['prefix' => '/admin'], function () {
 
-    Route::post('/uploadImage', [NewsController::class, 'image'])->name('uploadImage');
+    Route::post('/uploadImage', [NewsController::class, 'image'])->name('uploadImage')->middleware('resizeImage');
 
     Route::group(['prefix' => '/news'], function () {
         // Маршрут для відображення всіх новин
