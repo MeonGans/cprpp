@@ -50,7 +50,7 @@ class NewsController extends Controller
             'content' => 'required',
         ]);
 
-        // Отримуємо файл з запиту
+        // Отримуємо файл з запит
         $image = $request->file('image');
         if($image){
             $request['preview_image'] = $this->uploadImage($image);

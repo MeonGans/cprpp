@@ -1,27 +1,27 @@
 @charset "UTF-8";
 /*** LTR websites ***/
 /*===================================================
-Project: flex-it - IT Solutions & Business Services Responsive HTML5 Bootstrap5  Website Template 
+Project: flex-it - IT Solutions & Business Services Responsive HTML5 Bootstrap5  Website Template
 Auther: amin-themes
 Version: 2.0
 Last change: 22 March 2023
-Template Description: IT Solutions & Business Services Responsive HTML5 Bootstrap5  Website Template 
+Template Description: IT Solutions & Business Services Responsive HTML5 Bootstrap5  Website Template
 ====================================================*/
 /*==
 - global-rules and helper classes
 - page-header
-- page-hero 
+- page-hero
 - services
-- about 
-- portfolio 
-- portfolio-single  
-- our-team 
-- our-clients 
-- faq 
-- testimonials 
-- contact-us 
-- take-action 
-- page-footer 
+- about
+- portfolio
+- portfolio-single
+- our-team
+- our-clients
+- faq
+- testimonials
+- contact-us
+- take-action
+- page-footer
 - blog
 - 404 Page
 - pricing
@@ -1987,7 +1987,7 @@ body.rounded-btns .read-more {
 }
 
 /*
- End .page-header Rules    
+ End .page-header Rules
 */
 /*   Start .page-hero Rules   */
 .hero-swiper-slider .slide-title, .page-hero .hero-text-area .hero-title {
@@ -4373,6 +4373,11 @@ body.rounded-btns .read-more {
 .blog .post-main-area .post-content img {
   border-radius: 0.25rem;
 }
+
+.post-content p img {
+    opacity: 1;
+}
+
 .blog .post-main-area .post-content a {
   color: var(--clr-main);
   opacity: 0.85;
@@ -4393,7 +4398,8 @@ body.rounded-btns .read-more {
 .blog .post-main-area .post-content .post-text {
   overflow: hidden;
   font-size: 1.25rem;
-  opacity: 0.75;
+  /*opacity: 0.75;*/
+  color: rgba(var(--clr-dark-blue), 0.75);
   line-height: 1.6;
   margin-bottom: 1.25rem;
 }

@@ -133,7 +133,7 @@
                                                 </h2></a>
                                             <p class="post-excerpt">{{ $item->description }}</p><a class="read-more"
                                                                                                    href="{{ route('simple_news', $item->id) }}"
-                                                                                                   title="How litespeed technology works to speed up your site ">читати
+                                                                                                   title="{{ $item->title }}">читати
                                                 більше<i class="bi bi-arrow-right icon "></i></a>
                                         </div>
                                     </div>
