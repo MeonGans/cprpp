@@ -34,7 +34,7 @@ class ResizeImage
         if ($image) {
             $manager = new ImageManager(new Driver());
             $img = $manager->read($image);
-            $img->scale(width: 1080);
+            $img->scale(width: 1366);
             $img->save($image->getPathname());
 
             $request->merge(['file' => $image]);

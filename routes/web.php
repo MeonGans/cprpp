@@ -40,13 +40,13 @@ Route::group(['prefix' => '/admin'], function () {
         Route::get('/create', [NewsController::class, 'create'])->name('add_news');
 
         // Маршрут для збереження новоствореної новини
-        Route::post('/news', [NewsController::class, 'store'])->name('store_news');
+        Route::post('/news', [NewsController::class, 'store'])->name('store_news')->middleware('htmlPars');
 
         // Маршрут для відображення форми редагування новини
         Route::get('/{news}/edit', [NewsController::class, 'edit'])->name('edit_news');
 
         // Маршрут для оновлення відредагованої новини
-        Route::put('/{news}', [NewsController::class, 'update'])->name('update_news');
+        Route::put('/{news}', [NewsController::class, 'update'])->name('update_news')->middleware('htmlPars');
 
         // Маршрут для видалення новини
         Route::delete('/{news}', [NewsController::class, 'destroy'])->name('destroy_news');

@@ -56,6 +56,12 @@ class NewsController extends Controller
             $request['preview_image'] = $this->uploadImage($image);
         }
 
+        // Перевірка поля author_id
+        $authorId = $request->input('author_id');
+        if ($authorId == 0) {
+            $request['author_id'] = null;
+        }
+
         // Створення новини з отриманих даних і збереження її в базі даних
         News::query()->create($request->all());
 
@@ -120,6 +126,13 @@ class NewsController extends Controller
         if($image){
             $request['preview_image'] = $this->uploadImage($image);
         }
+
+        // Перевірка поля author_id
+        $authorId = $request->input('author_id');
+        if ($authorId == 0) {
+            $request['author_id'] = null;
+        }
+
         // Створення новини з отриманих даних і збереження її в базі даних
         $news->update($request->all());
 

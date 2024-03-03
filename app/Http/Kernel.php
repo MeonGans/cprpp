@@ -25,6 +25,7 @@ class Kernel extends HttpKernel
 
     protected $routeMiddleware = [
         'resizeImage' => \App\Http\Middleware\ResizeImage::class,
+        'htmlPars' => \App\Http\Middleware\ProcessFroalaHTML::class,
     ];
 
     /**

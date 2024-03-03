@@ -41,7 +41,7 @@
                                 <div class="mb-3">
                                     <label for="example-select" class="form-label">Автор</label>
                                     <select class="form-select" id="example-select" name="author_id">
-                                        <option>Без автора</option>
+                                        <option value="0">Без автора</option>
                                         @foreach($members as $member)
                                             <option value="{{ $member->id }}" @if($member->id == $news->author_id) selected @endif>{{ $member->name }}</option>
                                         @endforeach

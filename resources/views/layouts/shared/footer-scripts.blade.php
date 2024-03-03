@@ -51,11 +51,6 @@
             attribution: false,
             imageUploadURL: '{{ config('app.url') }}admin/uploadImage',
             imageUploadMethod: 'POST',
-            events: {
-                'image.uploaded': function (response) {
-                    alert(response);
-                },
-            }
         })
     })()
 </script>
