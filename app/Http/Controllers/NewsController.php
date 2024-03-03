@@ -78,7 +78,8 @@ class NewsController extends Controller
         $imageName = time().'.'.$image->extension();
         $today = date('Y-m-d');
         $image->storeAs('public/images/news/'.$today, $imageName);
-        return 'http://cprpp/storage/images/news/'.$today.'/'.$imageName;
+        $link = asset('storage/images/news/'.$today.'/'.$imageName);
+        return $link;
     }
 
     /**
