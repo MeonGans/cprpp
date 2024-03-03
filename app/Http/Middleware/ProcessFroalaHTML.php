@@ -24,6 +24,7 @@ class ProcessFroalaHTML
         // Парсинг елементів <ul> та <li> та додавання класів
         $this->parseElementWithClass($doc, 'ul', 'post-list');
         $this->parseElementWithClass($doc, 'li', 'post-list-item');
+        $this->parseListItem($doc, 'li', 'bi bi-check2-circle icon');
 
         // Парсинг елемента <img> та додавання класів
         $this->parseElementWithClass($doc, 'img', 'post-img');
@@ -69,6 +70,19 @@ class ProcessFroalaHTML
             $existingClasses = $element->getAttribute('class');
             $newClasses = $existingClasses ? $existingClasses . ' ' . $className : $className;
             $element->setAttribute('class', $newClasses);
+        }
+    }
+
+    private function parseListItem($doc, $tagName, $iconClass)
+    {
+        $elements = $doc->getElementsByTagName($tagName);
+        foreach ($elements as $element) {
+            // Створюємо новий елемент <i>
+            $newElement = $doc->createElement('i');
+            // Додаємо класи до нового елементу <i>
+            $newElement->setAttribute('class', $iconClass);
+            // Вставляємо новий елемент <i> перед текстом у <li>
+            $element->insertBefore($newElement, $element->firstChild);
         }
     }
 }
