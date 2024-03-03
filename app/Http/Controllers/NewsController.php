@@ -65,12 +65,13 @@ class NewsController extends Controller
 
     public function image(Request $request)
     {
-        $image = $request->file('image');
+        $link = null;
+        $image = $request->file('file');
         if($image){
             $link = $this->uploadImage($image);
         }
-
-        return '{ "link": "'.$link.'" }';
+        $response = ['link' => $link];
+        return response()->json($response);
     }
     public function uploadImage($image)
     {

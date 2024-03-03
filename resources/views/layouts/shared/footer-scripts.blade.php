@@ -48,10 +48,9 @@
         new FroalaEditor('#edit', {
             language: 'uk',
             key: "1C%kZV[IX)_SL}UJHAEFZMUJOYGYQE[\\ZJ]RAe(+%$==",
-            attribution: false, // to hide "Powered by Froala"
-            imageUploadURL: '{{ config('app.url') }}/admin/uploadImage',
+            attribution: false,
+            imageUploadURL: '{{ config('app.url') }}admin/uploadImage',
             imageUploadMethod: 'POST',
-
         })
     })()
 </script>
