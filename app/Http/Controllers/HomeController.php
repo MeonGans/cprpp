@@ -15,7 +15,7 @@ class HomeController extends Controller
         $news = News::query()
             ->with(['category', 'author'])
             ->orderByDesc('date')
-            ->orderBy('id')
+            ->orderByDesc('id')
             ->limit(3)
             ->get();
         $events = Event::query()->limit(6)->get();
@@ -36,7 +36,7 @@ class HomeController extends Controller
         $news = News::query()
             ->with(['category', 'author'])
             ->orderByDesc('date')
-            ->orderBy('id')
+            ->orderByDesc('id')
             ->limit(6)
             ->get();
         $categories = Category::all();

@@ -22,7 +22,7 @@ class NewsController extends Controller
         $news = News::query()
             ->with(['category', 'author'])
             ->orderByDesc('date')
-            ->orderBy('id')
+            ->orderByDesc('id')
             ->limit(10)
             ->get();
         return view('admin.news.news_list', compact('news'));
