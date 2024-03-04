@@ -34,27 +34,42 @@
                         @foreach($news as $item)
                             <div class="col-12 ">
 
-                                <div class="post-box"><a class="post-link" target="_blank" href="{{ route('simple_news', $item->id) }}"
+                                <div class="post-box"><a class="post-link" target="_blank"
+                                                         href="{{ route('simple_news', $item->id) }}"
                                                          title="{{ $item->title }}">
                                         <div class="col-5 post-img-wrapper  "><img class=" parallax-img   post-img"
                                                                                    loading="lazy"
                                                                                    src="{{ $item->preview_image }}"
                                                                                    alt=""/><span class="post-date"><span
-                                                    class="day">{{ date_format($item->date, 'd.m.Y')  }}</span></span></div>
+                                                    class="day">{{ date_format($item->date, 'd.m.Y')  }}</span></span>
+                                        </div>
                                     </a>
                                     <div class="col-7 post-summary">
-                                        @if ($item->category)
+                                        @if ($item->category or $item->author)
                                             <div class="post-info">
-                                                <a class="info post-cat" href="#">
-                                                    <i class="bi bi-bookmark icon"></i>
-                                                    {{ $item->category->name }}
+                                                @if ($item->category)
+                                                    <a class="info post-cat" href="#">
+                                                        <i class="bi bi-bookmark icon"></i>
+                                                        {{ $item->category->name }}
 
-                                                </a></div>
+                                                    </a>
+                                                @endif
+                                                @if ($item->author)
+                                                    <a class="info post-author" href="#">
+                                                        <i class=" bi bi-person icon"></i>
+                                                        {{ $item->author->name }}
+                                                    </a>
+                                                @endif
+                                            </div>
                                         @endif
-                                        <div class="post-text"><a class="post-link" href="{{ route('simple_news', $item->id) }}">
+
+                                        <div class="post-text"><a class="post-link"
+                                                                  href="{{ route('simple_news', $item->id) }}">
                                                 <h2 class="post-title">{{ $item->title }}</h2></a>
-                                            <p class="post-excerpt">{{ $item->description }}</p><a class="read-more" href="{{ route('simple_news', $item->id) }}"
-                                                                           title="{{ $item->title }}">читати більше<i class="bi bi-arrow-right icon "></i></a>
+                                            <p class="post-excerpt">{{ $item->description }}</p><a class="read-more"
+                                                                                                   href="{{ route('simple_news', $item->id) }}"
+                                                                                                   title="{{ $item->title }}">читати
+                                                більше<i class="bi bi-arrow-right icon "></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -81,25 +96,26 @@
             </div>
             <div class="col-12 col-xl-4 ">
                 <div class="blog-sidebar">
-{{--                    TODO додати пошук по новинам --}}
-{{--                    <!--search box-->--}}
-{{--                    <div class="search sidebar-box">--}}
-{{--                        <form class="search-form" action="#">--}}
-{{--                            <input class="search-input" type="search" name="seach_form" placeholder="Пошук новини...">--}}
-{{--                            <button class="search-btn" type="submit"><i class="bi bi-search icon"></i></button>--}}
-{{--                        </form>--}}
-{{--                    </div>--}}
+                    {{--                    TODO додати пошук по новинам --}}
+                    {{--                    <!--search box-->--}}
+                    {{--                    <div class="search sidebar-box">--}}
+                    {{--                        <form class="search-form" action="#">--}}
+                    {{--                            <input class="search-input" type="search" name="seach_form" placeholder="Пошук новини...">--}}
+                    {{--                            <button class="search-btn" type="submit"><i class="bi bi-search icon"></i></button>--}}
+                    {{--                        </form>--}}
+                    {{--                    </div>--}}
                     <!--categories box-->
                     <div class="cats sidebar-box">
                         <h6 class="sidebar-box-title">
                             Категорії:</h6>
                         <ul class="sidebar-list cats-list  ">
                             @foreach($categories as $category)
-                            <li class="cat-item"><a class="cat-link" href="?category={{ $category->id }}">{{ $category->name }}
-{{--                                   TODO Додати кількість новин в категорії
- <span class="cat-count">17</span>--}}
-                                </a>
-                            </li>
+                                <li class="cat-item"><a class="cat-link"
+                                                        href="?category={{ $category->id }}">{{ $category->name }}
+                                        {{--                                   TODO Додати кількість новин в категорії
+                                         <span class="cat-count">17</span>--}}
+                                    </a>
+                                </li>
                             @endforeach
                         </ul>
                     </div>
