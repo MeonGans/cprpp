@@ -117,11 +117,11 @@
                                                     {{ $item->category->name }}
                                                 </a>
                                             @endif
-                                            @if ($item->auhtor)
-                                                <a class="info post-cat" href="{{ route('simple_news', $item->id) }}">
-                                                    <i class="bi bi-post-author icon"></i>
-                                                    {{ $item->auhtor->name }}
-                                                </a>
+                                            @if ($item->author)
+                                                    <a class="info post-author" href="#">
+                                                        <i class=" bi bi-person icon"></i>
+                                                        {{ $item->author->name }}
+                                                    </a>
                                             @endif
                                         </div>
 
