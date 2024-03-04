@@ -19,9 +19,12 @@ class NewsController extends Controller
 
     public function newsList()
     {
-//        TODO додати автора
-        $news = News::query()->orderByDesc('date')->get();
-        $news->load(['category', 'author']);
+        $news = News::query()
+            ->with(['category', 'author'])
+            ->orderByDesc('date')
+            ->orderBy('id')
+            ->limit(10)
+            ->get();
         return view('admin.news.news_list', compact('news'));
     }
 

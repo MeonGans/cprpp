@@ -12,10 +12,13 @@ class HomeController extends Controller
 {
     function index()
     {
-        $news = News::query()->with(['category', 'author'])->orderByDesc('date')->limit(3)->get();
+        $news = News::query()
+            ->with(['category', 'author'])
+            ->orderByDesc('date')
+            ->orderBy('id')
+            ->limit(3)
+            ->get();
         $events = Event::query()->limit(6)->get();
-        //TODO додати сортування подій від сьогоднішньої дати і далі
-
 
         return view('home', compact('news','events'));
     }
@@ -29,7 +32,13 @@ class HomeController extends Controller
     function news()
     {
         //TODO додати пагінацію
-        $news = News::query()->with(['category','author'])->get();
+        //TODO додати фільтрацію з категоріями
+        $news = News::query()
+            ->with(['category', 'author'])
+            ->orderByDesc('date')
+            ->orderBy('id')
+            ->limit(6)
+            ->get();
         $categories = Category::all();
         return view('news', compact('news', 'categories'));
     }
