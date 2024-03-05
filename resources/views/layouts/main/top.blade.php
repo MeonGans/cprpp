@@ -45,7 +45,8 @@
     @include('layouts.main/head-css')
     <!-- main-LTR -->
     <link rel="stylesheet" href="{{ config('app.url') }}/css/main-LTR.css">
-    <title> ЦПРПП | Головна</title>
+    <title> ЦПРПП </title>
+{{--    TODO Додати title вибраної сторінки--}}
 
 </head>
 <body class="light-theme">
