@@ -23,6 +23,11 @@ class HomeController extends Controller
         return view('home', compact('news','events'));
     }
 
+    function test()
+    {
+        return view('test');
+    }
+
     function team()
     {
         $members = Member::all();

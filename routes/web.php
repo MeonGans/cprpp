@@ -22,6 +22,7 @@ use App\Http\Controllers\RoutingController;
 require __DIR__ . '/auth.php';
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/test', [HomeController::class, 'test'])->name('test');
 Route::get('/team', [HomeController::class, 'team'])->name('team');
 Route::get('/news', [HomeController::class, 'news'])->name('news');
 Route::get('/news/{news}', [HomeController::class, 'showNews'])->name('simple_news');
