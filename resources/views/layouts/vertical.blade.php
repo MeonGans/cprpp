@@ -52,6 +52,65 @@
 
     @vite(['resources/js/layout.js', 'resources/js/main.js'])
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let participantIndex = 1;
+
+            // Додавання нового учасника
+            document.getElementById('add-participant').addEventListener('click', function() {
+                const participantContainer = document.getElementById('participants');
+
+                // Клонування всього блоку учасника
+                const participantTemplate = `
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="header-title">Учасник ${participantIndex + 1}</h4>
+                            </div>
+                            <div class="card-body participant">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="mb-3">
+                                            <label for="simpleinput" class="form-label">Ім'я Прізвище</label>
+                                            <input type="text" id="simpleinput" class="form-control" name="participants[${participantIndex}][name]">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label for="simpleinput" class="form-label">Стать</label>
+                                        <div class="mt-2">
+                                            <div class="form-check form-check-inline">
+                                                <input type="radio" id="customRadio4" name="participants[${participantIndex}][gender]" value="female" class="form-check-input" checked>
+                                                <label class="form-check-label" for="customRadio4">Жінка</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input type="radio" id="customRadio3" name="participants[${participantIndex}][gender]" value="male" class="form-check-input">
+                                                <label class="form-check-label" for="customRadio3">Чоловік</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-danger remove-participant">Видалити учасника</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Додаємо новий блок учасника
+                participantContainer.insertAdjacentHTML('beforeend', participantTemplate);
+
+                // Збільшуємо індекс для наступного учасника
+                participantIndex++;
+            });
+
+            // Видалення учасника
+            document.addEventListener('click', function(e) {
+                if (e.target && e.target.classList.contains('remove-participant')) {
+                    const participant = e.target.closest('.col-12');
+                    participant.remove();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

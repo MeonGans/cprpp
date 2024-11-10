@@ -1,12 +1,14 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
+use App\Http\Controllers\ImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +23,7 @@ use App\Http\Controllers\RoutingController;
 
 require __DIR__ . '/auth.php';
 
+Route::get('/add-text-to-image', [ImageController::class, 'addTextToImage']);
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/test', [HomeController::class, 'test'])->name('test');
 Route::get('/team', [HomeController::class, 'team'])->name('team');
@@ -111,5 +114,25 @@ Route::group(['prefix' => '/admin'], function () {
 
         // Маршрут для видалення події
         Route::delete('/{event}', [EventController::class, 'destroy'])->name('destroy_event');
+    });
+
+    Route::group(['prefix' => '/courses'], function () {
+        // Маршрут для відображення всіх подій
+        Route::get('/course_list', [CourseController::class, 'index'])->name('course_list');
+
+        // Маршрут для відображення форми створення події
+        Route::get('/create', [CourseController::class, 'create'])->name('add_course');
+
+        // Маршрут для збереження новоствореної події
+        Route::post('/event', [CourseController::class, 'store'])->name('store_course');
+
+        // Маршрут для відображення форми редагування події
+        Route::get('/{event}/edit', [CourseController::class, 'edit'])->name('edit_course');
+
+        // Маршрут для оновлення відредагованої події
+        Route::put('/{event}', [CourseController::class, 'update'])->name('update_course');
+
+        // Маршрут для видалення події
+        Route::delete('/{event}', [CourseController::class, 'destroy'])->name('destroy_course');
     });
 });
