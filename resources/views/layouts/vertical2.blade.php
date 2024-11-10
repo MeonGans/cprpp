@@ -11,35 +11,13 @@
     <!-- Begin page -->
     <div class="wrapper">
 
-        @include('layouts.shared/topbar')
-        @include('layouts.shared/left-sidebar')
 
-        <div class="content-page">
-            <div class="content">
 
-                <!-- Start Content-->
-                <div class="container-fluid">
-                    @if (session('success'))
-                        <div class="toast show align-items-center bottom-0 end-0 position-absolute text-white bg-primary" role="alert" aria-live="assertive"
-                             aria-atomic="true">
-                            <div class="d-flex">
-                                <div class="toast-body">
-                                    {{ session('success') }}
-                                </div>
-                                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"
-                                        aria-label="Close"></button>
-                            </div>
-                        </div>
-                    @endif
                     @yield('content')
-                </div>
-                <!-- container -->
 
-            </div>
-            <!-- content -->
 
 {{--            @include('layouts.shared/footer')--}}
-        </div>
+
 
     </div>
     <!-- END wrapper -->

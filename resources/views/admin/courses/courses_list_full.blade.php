@@ -1,26 +1,11 @@
-@extends('layouts.vertical', ['title' => 'Сертифікати', 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
+@extends('layouts.vertical2', ['title' => 'Сертифікати', 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
 
 
 @section('content')
-    @include('layouts.shared.page-title', ['sub_title' => 'Новини', 'page_title' => 'Список сертифікатів'])
+{{--    @include('layouts.shared.page-title', ['sub_title' => 'Новини', 'page_title' => 'Список сертифікатів'])--}}
 
-    <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
 
-                    <div class="d-grid gap-2">
-                        <a class="btn btn-lg btn-success" href="{{route('add_course')}}">Додати сертифікацію</a>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="row">
+    <div class="row col-xl-6 mt-5 m-auto">
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-header">

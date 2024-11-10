@@ -23,6 +23,13 @@ class CourseController extends Controller
             ->get();
         return view('admin.courses.courses_list', compact('courses'));
     }
+    public function index_full()
+    {
+        $courses = Course::whereHas('certificates')
+            ->orderBy('course_date', 'desc')
+            ->get();
+        return view('admin.courses.courses_list_full', compact('courses'));
+    }
 
     /**
      * Show the form for creating a new resource.
