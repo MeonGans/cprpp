@@ -59,12 +59,12 @@
                                                                     <tr>
                                                                         <td>{{ $certificate->name }}</td>
                                                                         <td>44250583/{{  $certificate->certificate_number }}-{{ \Carbon\Carbon::parse($course->course_date)->format('y') }}</td>
-                                                                        <td>{{public_path('certificates/'.\Carbon\Carbon::parse($course->course_date)->format('m-Y').'/'.$certificate->certificate_number.'.jpg')}}</td>
+                                                                        <td>{{app_path('certificates/'.\Carbon\Carbon::parse($course->course_date)->format('m-Y').'/'.$certificate->certificate_number.'.jpg')}}</td>
                                                                         <td>
                                                                                 <a href="/certificates/{{\Carbon\Carbon::parse($course->course_date)->format('m-Y').'/'.$certificate->certificate_number.'.jpg'}}" class="btn btn-primary btn-sm me-1 tooltips"
                                                                                    data-bs-toggle="tooltip"
                                                                                    data-bs-placement="top" data-bs-title="Переглянути"> <i
-                                                                                        class="ri-eye-line"></i> </a>
+                                                                                        class="ri-eye-line" target="_blank"></i> </a>
                                                                         </td>
                                                                     </tr>
                                                                 @endforeach
