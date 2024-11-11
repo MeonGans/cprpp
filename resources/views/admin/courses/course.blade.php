@@ -53,6 +53,7 @@
                                                                                         class="ri-eye-line"></i> </a>
                                                                         </td>
                                                                     </tr>
+                                                                @endforeach
                                                                 </tbody>
                                                             </table>
                                                         </div> <!-- end table-responsive-->
@@ -64,7 +65,6 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach
 
 
                 </div> <!-- end card-body-->
