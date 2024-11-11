@@ -149,7 +149,9 @@ class CourseController extends Controller
                     $font->wrap(1463);
                 });
                 // Додавання дати (формат: місяць рік)
-                $dateText = Carbon::parse($course->date)->isoformat('D MMMM YYYY');
+
+
+                $dateText = Carbon::parse($course->course_date)->isoformat('D MMMM YYYY');
                 $image->text($dateText, 1256, 1093, function($font) {
                     $font->file(public_path('fonts/CalmiusSans-LowBold.ttf'));
                     $font->size(28);
@@ -159,6 +161,7 @@ class CourseController extends Controller
                     $font->valign('top');
                     $font->wrap(1463);
                 });
+
 
                 $year = Carbon::parse($course->course_date)->format('y');
                 $image->text("44250583/{$nextNumber}-{$year}", 1550, 1232, function($font) {
@@ -183,9 +186,13 @@ class CourseController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Event $event)
+    public function show(Course $course): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
-        //
+        // Завантажуємо сертифікати для переданого курсу
+        $course->load('certificates');
+
+        // Повертаємо представлення з переданими даними про курс
+        return view('admin.courses.course', compact('course'));
     }
 
     /**

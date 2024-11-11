@@ -13,7 +13,6 @@
                     <p class="text-muted mb-0">Виберіть тему події, щоб відобразити список учасників та їх сертифікати</p>
                 </div>
                 <div class="card-body">
-                    @foreach($courses as $course)
                         <div class="accordion" id="accordion">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="heading{{$course->id}}">
@@ -30,11 +29,6 @@
                                                 <div class="card">
                                                     <div class="card-body">
                                                         <div class="table-responsive-sm">
-                                                            <p>
-                                                                <a href="{{route('course_show', $course)}}" class="link-primary text-decoration-underline link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">
-                                                                    Відкрити подію
-                                                                </a>
-                                                            </p>
                                                             <table class="table table-striped table-centered mb-0">
                                                                 <thead>
                                                                 <tr>
@@ -59,7 +53,6 @@
                                                                                         class="ri-eye-line"></i> </a>
                                                                         </td>
                                                                     </tr>
-                                                                @endforeach
                                                                 </tbody>
                                                             </table>
                                                         </div> <!-- end table-responsive-->

@@ -32,6 +32,7 @@ Route::get('/news/{news}', [HomeController::class, 'showNews'])->name('simple_ne
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/events', [HomeController::class, 'contact'])->name('events');
 Route::get('/course_list', [CourseController::class, 'index_full'])->name('course_list_full');
+Route::get('/course/{course}', [CourseController::class, 'show'])->name('course_show');
 
 Route::group(['prefix' => '/admin'], function () {
 
