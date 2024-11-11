@@ -35,6 +35,7 @@
                                     <select class="form-select" id="example-select" name="duration_hours">
                                         <option value="2">2 (0.1 ЄТКС)</option>
                                         <option value="6">6 (0.2 ЄТКС)</option>
+                                        <option value="10">10 (0.3 ЄТКС)</option>
                                         <option value="15">15 (0.5 ЄКТС)</option>
                                     </select>
                                 </div>

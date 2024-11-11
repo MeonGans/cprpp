@@ -124,6 +124,8 @@ class CourseController extends Controller
                     $ects = '0.1';
                 } elseif ($course->duration_hours == '6') {
                     $ects = '0.2';
+                } elseif ($course->duration_hours == '10') {
+                    $ects = '0.3';
                 } elseif ($course->duration_hours == '15') {
                     $ects = '0.5';
                 }
