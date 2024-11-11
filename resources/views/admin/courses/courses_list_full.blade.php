@@ -57,6 +57,11 @@
                                                                                    data-bs-toggle="tooltip"
                                                                                    data-bs-placement="top" data-bs-title="Переглянути" target="_blank"> <i
                                                                                         class="ri-eye-line"></i> </a>
+                                                                            <a href="/certificates/{{\Carbon\Carbon::parse($course->course_date)->format('m-Y').'/'.$certificate->certificate_number.'.jpg'}}" download class="btn btn-success btn-sm me-1 tooltips"
+                                                                               data-bs-toggle="tooltip"
+                                                                               data-bs-placement="top" data-bs-title="Скачати">
+                                                                                <i class="ri-download-line"></i>
+                                                                            </a>
                                                                         </td>
                                                                     </tr>
                                                                 @endforeach
