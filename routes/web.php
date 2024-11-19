@@ -6,6 +6,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\StarController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
 use App\Http\Controllers\ImageController;
@@ -136,5 +137,19 @@ Route::group(['prefix' => '/admin'], function () {
 
         // Маршрут для видалення події
         Route::delete('/{event}', [CourseController::class, 'destroy'])->name('destroy_course');
+    });
+
+    Route::group(['prefix' => '/stars'], function () {
+        // Маршрут для відображення всіх подій
+        Route::get('/star_list', [StarController::class, 'index'])->name('star_list');
+
+        // Маршрут для відображення форми створення події
+        Route::get('/create', [StarController::class, 'create'])->name('add_stars');
+
+        // Маршрут для збереження новоствореної події
+        Route::post('/star', [StarController::class, 'store'])->name('store_star');
+
+        // Маршрут для видалення події
+        Route::delete('/{star}', [StarController::class, 'destroy'])->name('destroy_star');
     });
 });

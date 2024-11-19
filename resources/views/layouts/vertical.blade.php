@@ -51,7 +51,7 @@
     @include('layouts.shared/footer-scripts')
 
     @vite(['resources/js/layout.js', 'resources/js/main.js'])
-
+    @yield('scripts')
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             let participantIndex = 1;
@@ -110,6 +110,15 @@
                 }
             });
         });
+
+
+
+
+
+
+
+
+
         function copyLink(event, url) {
             event.preventDefault(); // Відміняє перехід за посиланням
 

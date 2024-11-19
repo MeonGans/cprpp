@@ -95,3 +95,4 @@
         <button type="submit" class="btn btn-primary">Додати</button>
     </form>
 @endsection
+
