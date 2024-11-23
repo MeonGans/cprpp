@@ -21,9 +21,7 @@ class StarController extends Controller
     public function index()
     {
         // Отримати всіх учнів з їх загальною кількістю зірок та останніми 10 записами
-        $students = Student::with(['stars' => function ($query) {
-            $query->latest()->take(10); // Завантажити останні 10 записів для кожного учня
-        }])->get();
+        $students = Student::with(['stars'])->get();
 
         // Додати загальну кількість зірок для кожного учня
         $students = $students->map(function ($student) {
