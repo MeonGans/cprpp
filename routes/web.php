@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\StarController;
+use App\Http\Controllers\TelegramBotController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
 use App\Http\Controllers\ImageController;
@@ -24,6 +25,7 @@ use App\Http\Controllers\ImageController;
 
 require __DIR__ . '/auth.php';
 
+Route::post('/telegram/webhook', [TelegramBotController::class, 'handle']);
 Route::get('/add-text-to-image', [ImageController::class, 'addTextToImage']);
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/test', [HomeController::class, 'test'])->name('test');
