@@ -13,5 +13,7 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         '/admin/uploadImage',
+        'telegram/webhook', // Додайте ваш ендпоінт
+
     ];
 }
