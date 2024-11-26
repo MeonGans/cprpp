@@ -147,9 +147,11 @@ Route::group(['prefix' => '/admin'], function () {
 
         // Маршрут для відображення форми створення події
         Route::get('/create', [StarController::class, 'create'])->name('add_stars');
+        Route::get('/create_more', [StarController::class, 'create_more'])->name('add_stars_more');
 
         // Маршрут для збереження новоствореної події
         Route::post('/star', [StarController::class, 'store'])->name('store_star');
+        Route::post('/star_more', [StarController::class, 'store_more'])->name('store_star_more');
 
         // Маршрут для видалення події
         Route::delete('/{star}', [StarController::class, 'destroy'])->name('destroy_star');

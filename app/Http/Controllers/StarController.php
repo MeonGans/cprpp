@@ -49,6 +49,12 @@ class StarController extends Controller
         return view('admin.stars.add_star', compact('students'));
     }
 
+    public function create_more()
+    {
+        $students = Student::all();
+        return view('admin.stars.add_star_more', compact('students'));
+    }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -93,6 +99,35 @@ class StarController extends Controller
         return redirect()->route('star_list')->with('success', 'Зірки додано успішно!');
     }
 
+    public function store_more(Request $request)
+    {
+        Carbon::setLocale('uk');
+        // Валідація даних
+        $request->validate([
+            'students' => 'required|array', // Масив учнів
+            'students.*.student' => 'required|string|max:255',
+            'students.*.reason' => 'required|string',
+            'students.*.amount' => 'required|integer',
+        ]);
+
+
+        // Перевірка наявності учасників
+        if ($request->has('students') && is_array($request->students)) {
+
+            // Зберігаємо учасників та їх сертифікати
+            foreach ($request->students as $student) {
+                Star::create(
+                    [
+                        'student_id' => $student['student'],
+                        'amount' => $student['amount'],
+                        'reason' => $student['reason'],
+                    ]
+                );
+            }
+        }
+
+        return redirect()->route('star_list')->with('success', 'Зірки додано успішно!');
+    }
     /**
      * Display the specified resource.
      */

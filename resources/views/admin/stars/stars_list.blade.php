@@ -14,8 +14,8 @@
     </div>
 
     <div class="col-xl-6  d-grid gap-2">
-        <button type="button" class="btn btn-lg btn-success" disabled="" data-bs-toggle="button">Видати/Забрати зірки</button>
-    </div>
+        <a class="btn btn-lg btn-success" href="{{route('add_stars_more')}}">Видати/Забрати зірки</a>
+      </div>
 </div>
 
                 </div>
