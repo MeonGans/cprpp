@@ -201,9 +201,9 @@ class StarController extends Controller
         $reason = $star->reason ? "Причина: {$star->reason}" : "Без причини";
 
         $message = "Привіт, {$firstName}! 🌟\n\n" .
-            "Тобі додано {$amount} зірок!\n" .
+            "Тобі додано {$amount} ⭐!\n" .
             "{$reason}\n\n" .
-            "Твій новий баланс: " . $student->stars()->sum('amount') . " зірок.";
+            "Твій новий баланс: " . $student->stars()->sum('amount') . " ⭐.";
 
         // Відправка повідомлення
         $this->telegram->sendMessage([
