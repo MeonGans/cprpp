@@ -9,12 +9,17 @@ use App\Models\Star;
 use App\Models\Student;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Intervention\Image\Drivers\Gd\Driver;
-use Intervention\Image\ImageManager;
+use Telegram\Bot\Api;
 
 class StarController extends Controller
 {
 
+    protected $telegram;
+
+    public function __construct()
+    {
+        $this->telegram = new Api(env('TELEGRAM_BOT_TOKEN'));
+    }
     /**
      * Display a listing of the resource.
      */
@@ -86,13 +91,17 @@ class StarController extends Controller
                 }
                 $reason = "за тематичну оцінку {$student['points']} з предмету \"{$student['course']}\" ";
 
-                Star::create(
+                $star = Star::create(
                     [
                         'student_id' => $student['student'],
                         'amount' => $amount,
                         'reason' => $reason,
                     ]
                 );
+                // Відправляємо повідомлення учню в Telegram
+                if ($student->telegram_id) {
+                    $this->sendTelegramNotification($student, $star);
+                }
             }
         }
 
@@ -116,13 +125,16 @@ class StarController extends Controller
 
             // Зберігаємо учасників та їх сертифікати
             foreach ($request->students as $student) {
-                Star::create(
+                $star = Star::create(
                     [
                         'student_id' => $student['student'],
                         'amount' => $student['amount'],
                         'reason' => $student['reason'],
                     ]
                 );
+                if ($student->telegram_id) {
+                    $this->sendTelegramNotification($student, $star);
+                }
             }
         }
 
@@ -174,5 +186,25 @@ class StarController extends Controller
     public function destroy(Event $event)
     {
         //
+    }
+
+    protected function sendTelegramNotification($student, $star)
+    {
+        $nameParts = explode(' ', $student->name);
+        $firstName = $nameParts[1] ?? $student->name;
+
+        $amount = $star->amount > 0 ? '+' . $star->amount : $star->amount;
+        $reason = $star->reason ? "Причина: {$star->reason}" : "Без причини";
+
+        $message = "Привіт, {$firstName}! 🌟\n\n" .
+            "Тобі додано {$amount} зірок!\n" .
+            "{$reason}\n\n" .
+            "Твій новий баланс: " . $student->stars()->sum('amount') . " зірок.";
+
+        // Відправка повідомлення
+        $this->telegram->sendMessage([
+            'chat_id' => $student->telegram_id,
+            'text' => $message
+        ]);
     }
 }
