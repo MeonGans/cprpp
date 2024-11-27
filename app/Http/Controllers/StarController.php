@@ -99,8 +99,10 @@ class StarController extends Controller
                     ]
                 );
                 // Відправляємо повідомлення учню в Telegram
-                if ($student->telegram_id) {
-                    $this->sendTelegramNotification($student, $star);
+                // Знайти студента в базі за ID
+                $studentModel = Student::find($student['student']);
+                if ($studentModel && !empty($studentModel->telegram_id)) {
+                    $this->sendTelegramNotification($studentModel, $star);
                 }
             }
         }
@@ -132,8 +134,10 @@ class StarController extends Controller
                         'reason' => $student['reason'],
                     ]
                 );
-                if ($student->telegram_id) {
-                    $this->sendTelegramNotification($student, $star);
+                // Знайти студента в базі за ID
+                $studentModel = Student::find($student['student']);
+                if ($studentModel && !empty($studentModel->telegram_id)) {
+                    $this->sendTelegramNotification($studentModel, $star);
                 }
             }
         }
