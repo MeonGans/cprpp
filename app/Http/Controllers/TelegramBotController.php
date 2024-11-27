@@ -216,7 +216,7 @@ class TelegramBotController extends Controller
         $stars = $student->stars()->get();
         foreach ($stars as $star) {
             $oper = $star->amount > 0 ? '+' : '';
-            $message .= "{$oper} {$star->amount} зірок  {$star->reason}\n";
+            $message .= "{$oper} {$star->amount} ⭐  {$star->reason}\n";
         }
 
         $this->telegram->sendMessage([
