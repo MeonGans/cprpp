@@ -172,6 +172,9 @@ class TelegramBotController extends Controller
                 case 'allstars':
                     $this->sendAllStars($chatId);
                     break;
+                case 'ruls':
+                    $this->sendRuls($chatId);
+                    break;
                 default:
                     $this->telegram->sendMessage(['chat_id' => $chatId, 'text' => "Невідома команда"]);
                     break;
