@@ -275,7 +275,7 @@ class TelegramBotController extends Controller
                     ['text' => '💰 Баланс зірок', 'callback_data' => 'balance'],
                 ],
                 [
-                    ['text' => '🕰️ Повна історія зірок', 'callback_data' => 'allstars'],
+                    ['text' => '🕰️ Повна історія', 'callback_data' => 'allstars'],
                     ['text' => '📜 Правила', 'callback_data' => 'ruls'],
                 ],
             ]
