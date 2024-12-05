@@ -200,8 +200,15 @@ class StarController extends Controller
         $amount = $star->amount > 0 ? '+' . $star->amount : $star->amount;
         $reason = $star->reason ? "Причина: {$star->reason}" : "Без причини";
 
+
+        if ($amount > 0) {
+            $re = 'Тобі додано ';
+        } else {
+            $re = 'В тебе знято ';
+        }
+
         $message = "Привіт, {$firstName}! 🌟\n\n" .
-            "Тобі додано {$amount} ⭐!\n" .
+            "{$re} {$amount} ⭐!\n" .
             "{$reason}\n\n" .
             "Твій новий баланс: " . $student->stars()->sum('amount') . " ⭐.";
 
