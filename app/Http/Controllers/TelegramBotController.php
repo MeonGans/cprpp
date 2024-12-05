@@ -266,7 +266,7 @@ class TelegramBotController extends Controller
         ]);
     }
 
-    protected function getAuthorizedKeyboard()
+    public function getAuthorizedKeyboard()
     {
         return [
             'inline_keyboard' => [

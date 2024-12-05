@@ -9,13 +9,16 @@
             <div class="card">
                 <div class="card-body">
 <div class="row">
-    <div class="col-xl-6 d-grid gap-2">
+    <div class="col-xl-4 d-grid gap-2">
         <a class="btn btn-lg btn-success" href="{{route('add_stars')}}">Видати зірки за тематичні</a>
     </div>
 
-    <div class="col-xl-6  d-grid gap-2">
+    <div class="col-xl-4  d-grid gap-2">
         <a class="btn btn-lg btn-success" href="{{route('add_stars_more')}}">Видати/Забрати зірки</a>
       </div>
+    <div class="col-xl-4  d-grid gap-2">
+        <a class="btn btn-lg btn-success" href="{{route('send_to_all')}}">Оголошення</a>
+    </div>
 </div>
 
                 </div>

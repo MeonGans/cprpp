@@ -192,6 +192,30 @@ class StarController extends Controller
         //
     }
 
+    public function send_to_all(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
+    {
+        return view('admin.stars.send_to_all');
+    }
+
+    public function send_to_all_send(Request $request)
+    {
+        $message = $request->massage;
+        $students = Student::whereNotNull('telegram_id')->get();
+
+        $telegramBotController = new TelegramBotController(); // Виклик контролера
+        $keyboard = $telegramBotController->getAuthorizedKeyboard();
+
+        foreach ($students as $student) {
+            $this->telegram->sendMessage([
+                'chat_id' => $student->telegram_id,
+                'text' => $message,
+                'parse_mode' => 'html',
+                'reply_markup' => json_encode($keyboard),
+            ]);
+        }
+        return redirect()->route('star_list')->with('success', 'Повідомлення відправлено успішно!');
+    }
+
     protected function sendTelegramNotification($student, $star)
     {
         $nameParts = explode(' ', $student->name);
@@ -218,4 +242,6 @@ class StarController extends Controller
             'text' => $message
         ]);
     }
+
+
 }

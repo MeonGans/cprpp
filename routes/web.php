@@ -144,6 +144,8 @@ Route::group(['prefix' => '/admin'], function () {
     Route::group(['prefix' => '/stars'], function () {
         // Маршрут для відображення всіх подій
         Route::get('/star_list', [StarController::class, 'index'])->name('star_list');
+        Route::get('/send_to_all', [StarController::class, 'send_to_all'])->name('send_to_all');
+        Route::post('/send_to_all', [StarController::class, 'send_to_all_send'])->name('send_to_all_send');
 
         // Маршрут для відображення форми створення події
         Route::get('/create', [StarController::class, 'create'])->name('add_stars');
