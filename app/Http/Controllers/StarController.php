@@ -34,8 +34,18 @@ class StarController extends Controller
             return $student;
         });
         $totalStars = $students->sum('totalStars');
+
+        // Вирахувати кількість учнів, які мають хоча б одну зірку
+        $studentsWithStarsCount = $students->filter(function ($student) {
+            return $student->totalStars > 0;
+        })->count();
+
+        // Обчислити середнє значення
+        $averageStars = $studentsWithStarsCount > 0
+            ? $totalStars / $studentsWithStarsCount
+            : 0;
     // Повернення даних у view
-    return view('admin.stars.stars_list', compact(['students', 'totalStars']));
+    return view('admin.stars.stars_list', compact(['students', 'totalStars', 'averageStars']));
     }
     public function index_full()
     {
