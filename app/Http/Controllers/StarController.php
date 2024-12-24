@@ -33,7 +33,7 @@ class StarController extends Controller
             $student->totalStars = $student->stars->sum('amount'); // Загальна кількість зірок
             return $student;
         });
-        $totalStars = $students->sum('amount');
+        $totalStars = $students->sum('totalStars');
     // Повернення даних у view
     return view('admin.stars.stars_list', compact(['students', 'totalStars']));
     }
