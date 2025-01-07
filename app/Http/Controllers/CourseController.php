@@ -165,7 +165,7 @@ class CourseController extends Controller
                 });
 
 
-                $year = Carbon::parse($course->course_date)->format('y');
+                $year = Carbon::now()->format('y');
                 $image->text("44250583/{$nextNumber}-{$year}", 1550, 1232, function($font) {
                     $font->file(public_path('fonts/CalmiusSans-LowBold.ttf'));
                     $font->size(24);
