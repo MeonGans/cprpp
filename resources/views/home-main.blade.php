@@ -9,7 +9,7 @@
 <section class="page-hero  d-flex align-items-center  tringle-bg" id="page-hero">
     <div class="overlay-photo-image-bg" data-bg-img="assets/images/sections-bg-images/pattern-bg-1.jpg"
          data-bg-opacity=".2"></div>
-    <div class="particles-js  dots" id="particles-js"></div>
+{{--    <div class="particles-js  dots" id="particles-js"></div>--}}
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12 col-lg-6 ">
