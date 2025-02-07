@@ -20,7 +20,7 @@ class HomeController extends Controller
             ->get();
         $events = Event::query()->limit(6)->get();
 
-        return view('home', compact('news','events'));
+        return view('home-main', compact('news','events'));
     }
 
     function test()
