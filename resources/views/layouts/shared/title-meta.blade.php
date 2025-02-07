@@ -1,11 +1,11 @@
 <meta charset="utf-8" />
 <title>{{ $title }} | ЦПРПП </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta content="A fully responsive admin theme which can be used to build CRM, CMS,ERP etc." name="description" />
-<meta content="Techzaa" name="author" />
+<meta content="Центр професійного розвитку педагогічних працівників Вишневої міської ради" name="description" />
+<meta content="CPRPP" name="Oleksii Lysenko" />
 
 <!-- App favicon -->
-<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" href="{{ config('app.url') }}/assets/images/fav-icon/favicon.ico">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="{{ config('app.url') }}/editor/css/froala_editor.css">

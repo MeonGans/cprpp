@@ -16,23 +16,8 @@
                 <!--Start of .hero-text-area-->
                 <div class="hero-text-area   ">
                     <div class="row">
-                        <div class="col-12   ">
-                            <div class="hero-social-icons mb-4 ">
-                                <div class="sc-wrapper dir-row sc-flat">
-                                    <ul class="sc-list">
-                                        <li class="sc-item " title="Facebook"><a class="sc-link" href="#0"
-                                                                                 title="social media icon"><i
-                                                    class="fab fa-facebook-f sc-icon"></i></a></li>
-                                        <li class="sc-item " title="youtube"><a class="sc-link" href="#0"
-                                                                                title="social media icon"><i
-                                                    class="fab fa-youtube sc-icon"></i></a></li>
-                                        <li class="sc-item " title="instagram"><a class="sc-link" href="#0"
-                                                                                  title="social media icon"><i
-                                                    class="fab fa-instagram sc-icon"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+
+
                         <div class="col-12">
 
                             <h1 class="hero-title  ">Центр професійного

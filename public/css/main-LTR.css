@@ -5149,3 +5149,77 @@ body.dark-theme .about .stats-counter.stats-cards .stat-box {
 }
 
 /*    End dark theme rules  *//*# sourceMappingURL=main-LTR.css.map */
+
+
+
+.btn-outline_serf, .btn-solid {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 1px;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 0.25rem;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 0.75rem 2.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0px 3px 10px -5px rgba(var(--clr-dark-blue-rgb), 0.15);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    z-index: 0;
+}
+.btn-outline_serf .icon, .btn-solid .icon {
+    display: flex;
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: transform 0.3s ease-in-out 0s;
+}
+.btn-outline_serf:hover .icon, .btn-solid:hover .icon {
+    transform: translatex(5px);
+}
+.btn-outline_serf:focus, .btn-solid:focus {
+    outline: none !important;
+}
+.btn-medium.btn-outline_serf, .btn-medium.btn-solid {
+    padding: 0.625rem 2rem;
+}
+.btn-small.btn-outline_serf, .btn-small.btn-solid {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+@media (max-width: 575px) {
+    .btn-outline_serf, .btn-solid {
+        padding: 0.5rem 1.25rem;
+    }
+}
+.btn-outline_serf {
+    /**/
+    border: 2px solid;
+    color: var(--clr-main);
+    border-color: var(--clr-main);
+    background-color: transparent;
+}
+.btn-outline_serf:hover {
+    color: var(--clr-white);
+    background-color: var(--clr-main);
+}
+
+.is-sticky.header-basic .btn-outline_serf{
+    color: var(--clr-white);
+    background-color: var(--clr-main);
+    border-color: var(--clr-white);
+}
+
+.is-sticky.header-basic .btn-outline_serf:hover {
+    color: var(--clr-main);
+    background-color: var(--clr-white);
+}
