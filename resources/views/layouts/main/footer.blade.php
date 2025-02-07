@@ -77,7 +77,7 @@
 <script src="{{ config('app.url') }}/js/vendors/jquery.countTo.js"></script>
 
 <!--     wow     -->
-<!--        <script src="js/vendors/wow.min.js"></script>-->
+<script src="{{ config('app.url') }}/js/vendors/wow.min.js"></script>
 
 <!--     swiper     -->
 <script src="{{ config('app.url') }}/js/vendors/swiper-bundle.min.js"></script>
