@@ -134,46 +134,47 @@
 <!-- End  blog Section-->
 
 <!-- Start  services Section-->
-<section class="services services-boxed mega-section" id="services">
-    <div class="container">
-        <div class="sec-heading  ">
-            <div class="content-area"><span class=" pre-title       wow fadeInUp " data-wow-delay=".2s">Афіша</span>
-                <h2 class=" title    wow fadeInUp" data-wow-delay=".4s"><span class='hollow-text'>Найближчі</span> події
-                </h2>
-                <p class="subtitle   wow fadeInUp " data-wow-delay=".6s">Дата та місце подій можуть змінюватись<br>просимо
-                    слідкувати за оновленнями на сайті</p>
-            </div>
-            <div class=" cta-area   wow fadeInUp" data-wow-delay=".8s"><a class="cta-btn btn-solid ">Переглянути всі<i
-                        class="bi bi-arrow-right icon "></i></a></div>
-        </div>
-        <div class="row gx-4 gy-4 services-row ">
-            @php
-                $i = 1;
-            @endphp
-            @foreach($events as $event)
-                <div class="col-12 col-md-6  col-lg-4 mx-auto ">
-                    <!--Start First service box-->
-                    <div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".1s">
-                        <div class="service-icon"><i class="{{ $event->icon }} font-icon"></i>
-                            <span class="post-date"><span class="day">{{ $event->date }}</span></span>
-                        </div>
+{{-- TODO допрацювати події --}}
+{{--<section class="services services-boxed mega-section" id="services">--}}
+{{--    <div class="container">--}}
+{{--        <div class="sec-heading  ">--}}
+{{--            <div class="content-area"><span class=" pre-title       wow fadeInUp " data-wow-delay=".2s">Афіша</span>--}}
+{{--                <h2 class=" title    wow fadeInUp" data-wow-delay=".4s"><span class='hollow-text'>Найближчі</span> події--}}
+{{--                </h2>--}}
+{{--                <p class="subtitle   wow fadeInUp " data-wow-delay=".6s">Дата та місце подій можуть змінюватись<br>просимо--}}
+{{--                    слідкувати за оновленнями на сайті</p>--}}
+{{--            </div>--}}
+{{--            <div class=" cta-area   wow fadeInUp" data-wow-delay=".8s"><a class="cta-btn btn-solid ">Переглянути всі<i--}}
+{{--                        class="bi bi-arrow-right icon "></i></a></div>--}}
+{{--        </div>--}}
+{{--        <div class="row gx-4 gy-4 services-row ">--}}
+{{--            @php--}}
+{{--                $i = 1;--}}
+{{--            @endphp--}}
+{{--            @foreach($events as $event)--}}
+{{--                <div class="col-12 col-md-6  col-lg-4 mx-auto ">--}}
+{{--                    <!--Start First service box-->--}}
+{{--                    <div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".1s">--}}
+{{--                        <div class="service-icon"><i class="{{ $event->icon }} font-icon"></i>--}}
+{{--                            <span class="post-date"><span class="day">{{ $event->date }}</span></span>--}}
+{{--                        </div>--}}
 
-                        <span class="service-num hollow-text">{{ $i }}</span>
-                        <div class="service-content">
-                            <h3 class="service-title">{{ $event->name }}</h3>
-                            <p class="service-text">{{ $event->description }}</p>
-                        </div>
-                        <a class="read-more" href="#">дізнатись більше<i class="bi bi-arrow-right icon "></i></a>
-                    </div>
-                    <!-- End First service box   -->
-                </div>
-                @php
-                    $i++;
-                @endphp
-            @endforeach
-        </div>
-    </div>
-</section>
+{{--                        <span class="service-num hollow-text">{{ $i }}</span>--}}
+{{--                        <div class="service-content">--}}
+{{--                            <h3 class="service-title">{{ $event->name }}</h3>--}}
+{{--                            <p class="service-text">{{ $event->description }}</p>--}}
+{{--                        </div>--}}
+{{--                        <a class="read-more" href="#">дізнатись більше<i class="bi bi-arrow-right icon "></i></a>--}}
+{{--                    </div>--}}
+{{--                    <!-- End First service box   -->--}}
+{{--                </div>--}}
+{{--                @php--}}
+{{--                    $i++;--}}
+{{--                @endphp--}}
+{{--            @endforeach--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</section>--}}
 <!-- End  services Section-->
 
 <!-- Start  about Section-->
@@ -203,73 +204,55 @@
                                 <div class="col-9 col-xl-6">
                                     <div class="info-item"><i class="bi-graph-up  info-icon"></i>
                                         <div class="info-content">
-                                            <a class="post-link" href="post-single.html"
-                                               title="Підвищення кваліфікації">
                                                 <h5 class="info-title">Підвищення кваліфікації</h5>
                                                 <p class="info-text">Курси для вчителів - вдосконалення методів та
                                                     впровадження інновацій у навчання.</p>
-                                            </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-9 col-xl-6">
                                     <div class="info-item"><i class="bi-diagram-3 info-icon"></i>
                                         <div class="info-content">
-                                            <a class="post-link" href="post-single.html"
-                                               title="Підвищення кваліфікації">
                                                 <h5 class="info-title">Старша профільна школа</h5>
                                                 <p class="info-text">Розвиток інтелекту та підготовка до навчання в
                                                     старшій профільній школі.</p>
-                                            </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-9 col-xl-6">
                                     <div class="info-item"><i class="bi-emoji-heart-eyes info-icon"></i>
                                         <div class="info-content">
-                                            <a class="post-link" href="post-single.html"
-                                               title="Підвищення кваліфікації">
                                                 <h5 class="info-title">Психологічна служба</h5>
                                                 <p class="info-text">Психологічна підтримка для учнів та вчителів -
                                                     збалансоване емоційне здоров'я в навчальному середовищі.</p>
-                                            </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-9 col-xl-6">
                                     <div class="info-item"><i class="bi-compass  info-icon"></i>
                                         <div class="info-content">
-                                            <a class="post-link" href="post-single.html"
-                                               title="Підвищення кваліфікації">
                                                 <h5 class="info-title">Профорієнтаційна робота</h5>
                                                 <p class="info-text">Консультації та інтерактивні заходи - допомога
                                                     учням у виборі професії та кар'єрного шляху.</p>
-                                            </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-9 col-xl-6">
                                     <div class="info-item"><i class="bi-book  info-icon"></i>
                                         <div class="info-content">
-                                            <a class="post-link" href="post-single.html"
-                                               title="Підвищення кваліфікації">
                                                 <h5 class="info-title">Мала академія наук</h5>
                                                 <p class="info-text">Розвиток наукового мислення серед талановитих учнів
                                                     - лабораторні дослідження та вивчення новітніх наукових
                                                     тенденцій.</p>
-                                            </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-9 col-xl-6">
                                     <div class="info-item"><i class="bi-trophy info-icon"></i>
                                         <div class="info-content">
-                                            <a class="post-link" href="post-single.html"
-                                               title="Підвищення кваліфікації">
                                                 <h5 class="info-title">Олімпіади</h5>
                                                 <p class="info-text">Змагання серед учнів для розвитку інтелектуальних
                                                     та творчих здібностей.</p>
-                                            </a>
                                         </div>
                                     </div>
                                 </div>

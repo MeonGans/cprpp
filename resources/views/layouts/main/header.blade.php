@@ -16,18 +16,20 @@
                 <li class="menu-item has-sub-menu"><a class="menu-link   active" href="#0">Про нас <i class="fas fa-plus  plus-icon"> </i></a>
                     <ul class="sub-menu ">
                         <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{{ route('team') }}">Наша команда</a></li>
-                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="#">Статут</a></li>
+                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="/docs/statut.pdf" target='_blank'>Статут</a></li>
                         <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="#">Плани роботи</a></li>
 {{--                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="#">Програми</a></li>--}}
                     </ul>
                 </li>
                 <!--              <li class="menu-item"><a class="menu-link  " href="about-us.html">Мережа закладів</a></li>-->
-                <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">Події<i class="fas fa-plus  plus-icon"> </i></a>
-                    <ul class="sub-menu ">
-                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{{ route('news') }}">Новини</a></li>
-                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{{ route('events') }}">Афіша</a></li>
-                    </ul>
-                </li>
+                <li class="menu-item"><a class="menu-link " href="{{ route('news') }} ">Новини</a></li>
+{{--                 TODO як дороблю події, розмістити афішу--}}
+{{--                <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">Події<i class="fas fa-plus  plus-icon"> </i></a>--}}
+{{--                    <ul class="sub-menu ">--}}
+{{--                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{{ route('news') }}">Новини</a></li>--}}
+{{--                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{{ route('events') }}">Афіша</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
 {{--                <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">Мережа<i class="fas fa-plus  plus-icon"> </i></a>--}}
 {{--                    <ul class="sub-menu ">--}}
 {{--                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="#">ЗДО</a></li>--}}
