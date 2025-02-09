@@ -34,19 +34,26 @@ class HomeController extends Controller
         return view('team', compact('members'));
     }
 
-    function news()
+    public function news(Request $request)
     {
-        //TODO додати пагінацію
-        //TODO додати фільтрацію з категоріями
-        $news = News::query()
-            ->with(['category', 'author'])
-            ->orderByDesc('date')
+        $query = News::query()->with(['category', 'author']);
+
+        // Фільтрація за категорією
+        if ($request->has('category') && $request->category) {
+            $query->where('category_id', $request->category);
+        }
+
+        // Пагінація з урахуванням параметрів запиту
+        $news = $query->orderByDesc('date')
             ->orderByDesc('id')
-            ->limit(6)
-            ->get();
+            ->paginate(6)
+            ->appends(['category' => $request->category]);
+
         $categories = Category::all();
+
         return view('news', compact('news', 'categories'));
     }
+
 
     function showNews(News $news)
     {

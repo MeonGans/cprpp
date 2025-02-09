@@ -31,7 +31,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/test', [HomeController::class, 'test'])->name('test');
 Route::get('/team', [HomeController::class, 'team'])->name('team');
 Route::get('/news', [HomeController::class, 'news'])->name('news');
-Route::get('/news/{news}', [HomeController::class, 'showNews'])->name('simple_news');
+Route::get('/news/{news}', [HomeController::class, 'showNews'])->where('news', '[0-9]+')->name('simple_news');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/events', [HomeController::class, 'contact'])->name('events');
 Route::get('/course_list', [CourseController::class, 'index_full'])->name('course_list_full');

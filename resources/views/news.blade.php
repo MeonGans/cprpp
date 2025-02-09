@@ -75,22 +75,60 @@
                                 </div>
                             </div>
                         @endforeach
-                        {{--                        TODO Додати пагінацію --}}
-                        {{--                        <div class="col-12">--}}
-                        {{--                            <!--Start pagination-->--}}
-                        {{--                            <nav class="ma-pagination">--}}
-                        {{--                                <ul class="pagination justify-content-center">--}}
-                        {{--                                    <li class="ma-page-item deactive-page-item"><a class="ma-page-link " href="#" title="Previous Page"><i class="bi bi-chevron-left icon "></i></a></li>--}}
-                        {{--                                    <li class="ma-page-item active"><a class="ma-page-link " href="#">1 </a></li>--}}
-                        {{--                                    <li class="ma-page-item  "><a class="ma-page-link " href="#">2 </a></li>--}}
-                        {{--                                    <li class="ma-page-item  "><a class="ma-page-link " href="#">3 </a></li>--}}
-                        {{--                                    <li class="ma-page-item  "><a class="ma-page-link " href="#">4 </a></li>--}}
-                        {{--                                    <li class="ma-page-item  "><a class="ma-page-link " href="#">5 </a></li>--}}
-                        {{--                                    <li class="ma-page-item  "><a class="ma-page-link " href="#">6 </a></li>--}}
-                        {{--                                    <li class="ma-page-item"><a class="ma-page-link" href="#" title="Next Page"><i class="bi bi-chevron-right icon "></i></a></li>--}}
-                        {{--                                </ul>--}}
-                        {{--                            </nav>--}}
-                        {{--                        </div>--}}
+                            <div class="col-12">
+                                <nav class="ma-pagination">
+                                    <ul class="pagination justify-content-center">
+                                        {{-- Попередня сторінка --}}
+                                        @if ($news->onFirstPage())
+                                            <li class="ma-page-item deactive-page-item">
+                                                <a class="ma-page-link" href="#" title="Previous Page"><i class="bi bi-chevron-left icon"></i></a>
+                                            </li>
+                                        @else
+                                            <li class="ma-page-item">
+                                                <a class="ma-page-link" href="{{ $news->previousPageUrl() }}&category={{ request('category') }}" title="Previous Page">
+                                                    <i class="bi bi-chevron-left icon"></i>
+                                                </a>
+                                            </li>
+                                        @endif
+
+                                        {{-- Номери сторінок --}}
+                                        @foreach ($news->getUrlRange(1, $news->lastPage()) as $page => $url)
+                                            <li class="ma-page-item {{ $page == $news->currentPage() ? 'active' : '' }}">
+                                                <a class="ma-page-link" href="{{ $url }}&category={{ request('category') }}">{{ $page }}</a>
+                                            </li>
+                                        @endforeach
+
+                                        {{-- Наступна сторінка --}}
+                                        @if ($news->hasMorePages())
+                                            <li class="ma-page-item">
+                                                <a class="ma-page-link" href="{{ $news->nextPageUrl() }}&category={{ request('category') }}" title="Next Page">
+                                                    <i class="bi bi-chevron-right icon"></i>
+                                                </a>
+                                            </li>
+                                        @else
+                                            <li class="ma-page-item deactive-page-item">
+                                                <a class="ma-page-link" href="#" title="Next Page"><i class="bi bi-chevron-right icon"></i></a>
+                                            </li>
+                                        @endif
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            {{--                                                <div class="col-12">--}}
+{{--                                                    <!--Start pagination-->--}}
+{{--                                                    <nav class="ma-pagination">--}}
+{{--                                                        <ul class="pagination justify-content-center">--}}
+{{--                                                            <li class="ma-page-item deactive-page-item"><a class="ma-page-link " href="#" title="Previous Page"><i class="bi bi-chevron-left icon "></i></a></li>--}}
+{{--                                                            <li class="ma-page-item active"><a class="ma-page-link " href="#">1 </a></li>--}}
+{{--                                                            <li class="ma-page-item  "><a class="ma-page-link " href="#">2 </a></li>--}}
+{{--                                                            <li class="ma-page-item  "><a class="ma-page-link " href="#">3 </a></li>--}}
+{{--                                                            <li class="ma-page-item  "><a class="ma-page-link " href="#">4 </a></li>--}}
+{{--                                                            <li class="ma-page-item  "><a class="ma-page-link " href="#">5 </a></li>--}}
+{{--                                                            <li class="ma-page-item  "><a class="ma-page-link " href="#">6 </a></li>--}}
+{{--                                                            <li class="ma-page-item"><a class="ma-page-link" href="#" title="Next Page"><i class="bi bi-chevron-right icon "></i></a></li>--}}
+{{--                                                        </ul>--}}
+{{--                                                    </nav>--}}
+{{--                                                </div>--}}
                     </div>
                 </div>
             </div>
@@ -110,10 +148,9 @@
                             Категорії:</h6>
                         <ul class="sidebar-list cats-list  ">
                             @foreach($categories as $category)
-                                <li class="cat-item"><a class="cat-link"
-                                                        href="?category={{ $category->id }}">{{ $category->name }}
-                                        {{--                                   TODO Додати кількість новин в категорії
-                                         <span class="cat-count">17</span>--}}
+                                <li class="cat-item">
+                                    <a class="cat-link"
+                                        href="{{ route('news', ['category' => $category->id]) }}">{{ $category->name }}
                                     </a>
                                 </li>
                             @endforeach
