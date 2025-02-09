@@ -40,12 +40,12 @@
 {{--                </li>--}}
                 <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">Напрямки роботи<i class="fas fa-plus  plus-icon"> </i></a>
                     <ul class="sub-menu ">
-                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="#">Підвищення кваліфікації</a></li>
+                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{{ route('news', ['category' => 7]) }}">Підвищення кваліфікації</a></li>
 {{--                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="#">Старша профільна школа</a></li>--}}
 {{--                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="#">Психологічна служба</a></li>--}}
-                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="#">Профорієнтаційна робота</a></li>
-                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="#">МАН</a></li>
-                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="#">Олімпіади та конкурси</a></li>
+                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{{ route('news', ['category' => 5]) }}">Профорієнтаційна робота</a></li>
+                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{{ route('news', ['category' => 4]) }}">МАН</a></li>
+                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{{ route('news', ['category' => 3]) }}">Олімпіади та конкурси</a></li>
                     </ul>
                 </li>
                 <li class="menu-item"><a class="menu-link " href="{{ route('contact') }} ">Контакти</a></li>
