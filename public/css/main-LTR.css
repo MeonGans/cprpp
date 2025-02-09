@@ -3994,6 +3994,10 @@ body.rounded-btns .read-more {
   background-color: var(--clr-main);
   color: var(--clr-white);
 }
+.blog .cats .select {
+  background-color: var(--clr-main);
+  color: var(--clr-white);
+}
 .blog .cats .cat-item .cat-link {
   font-weight: 400;
   text-transform: none;

@@ -144,18 +144,18 @@
                     {{--                    </div>--}}
                     <!--categories box-->
                     <div class="cats sidebar-box">
-                        <h6 class="sidebar-box-title">
-                            Категорії:</h6>
-                        <ul class="sidebar-list cats-list  ">
+                        <h6 class="sidebar-box-title">Категорії:</h6>
+                        <ul class="sidebar-list cats-list">
                             @foreach($categories as $category)
-                                <li class="cat-item">
-                                    <a class="cat-link"
-                                        href="{{ route('news', ['category' => $category->id]) }}">{{ $category->name }}
+                                <li class="cat-item {{ request('category') == $category->id ? 'select' : '' }}">
+                                    <a class="cat-link" href="{{ route('news', ['category' => $category->id]) }}">
+                                        {{ $category->name }}
                                     </a>
                                 </li>
                             @endforeach
                         </ul>
                     </div>
+
                 </div>
             </div>
         </div>
