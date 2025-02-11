@@ -44,7 +44,7 @@
           href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;display=swap">
     @include('layouts.main/head-css')
     <!-- main-LTR -->
-    <link rel="stylesheet" href="{{ config('app.url') }}/css/main-LTR.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/main-LTR.css?v={{ filemtime(public_path('css/main-LTR.css')) }}">
     <title> ЦПРПП </title>
 {{--    TODO Додати title вибраної сторінки--}}
 
