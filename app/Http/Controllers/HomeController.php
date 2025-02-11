@@ -27,6 +27,10 @@ class HomeController extends Controller
     {
         return view('test');
     }
+    function plans()
+    {
+        return view('plans');
+    }
 
     function team()
     {

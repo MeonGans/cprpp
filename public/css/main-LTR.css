@@ -2602,7 +2602,7 @@ body.rounded-btns .read-more {
   padding: 2rem;
   margin-bottom: 2rem;
   border-radius: 0.25rem;
-  background-color: rgba(var(--clr-main-rgb), 0.75);
+  background-color: rgba(var(--clr-main-rgb), 0.15);
   z-index: 0;
 }
 .service-single .service-sidebar .sidebar-pane .sidebar-title {

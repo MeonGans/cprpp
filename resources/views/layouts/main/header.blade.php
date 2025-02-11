@@ -17,7 +17,7 @@
                     <ul class="sub-menu ">
                         <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{{ route('team') }}">Наша команда</a></li>
                         <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="/docs/statut.pdf" target='_blank'>Статут</a></li>
-                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="#">Плани роботи</a></li>
+                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{{ route('plans') }}">Плани роботи</a></li>
 {{--                        <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="#">Програми</a></li>--}}
                     </ul>
                 </li>
