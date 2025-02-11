@@ -38,37 +38,37 @@
                                 <ul class="list">
                                     <li class="list-item">
                                         <i class="flaticon-downloading font-icon"></i>
-                                        <a href="{{ asset('docs/planes/02-25.pdf') }}" target="_blank">
+                                        <a href="{{ asset('docs/plans/02-25.pdf') }}" target="_blank">
                                             Лютий 2025 <i class="bi bi-arrow-right icon"></i>
                                         </a>
                                     </li>
                                     <li class="list-item">
                                         <i class="flaticon-downloading font-icon"></i>
-                                        <a href="{{ asset('docs/planes/01-25.pdf') }}" target="_blank">
+                                        <a href="{{ asset('docs/plans/01-25.pdf') }}" target="_blank">
                                             Січень 2025 <i class="bi bi-arrow-right icon"></i>
                                         </a>
                                     </li>
                                     <li class="list-item">
                                         <i class="flaticon-downloading font-icon"></i>
-                                        <a href="{{ asset('docs/planes/12-24.pdf') }}" target="_blank">
+                                        <a href="{{ asset('docs/plans/12-24.pdf') }}" target="_blank">
                                             Грудень 2024 <i class="bi bi-arrow-right icon"></i>
                                         </a>
                                     </li>
                                     <li class="list-item">
                                         <i class="flaticon-downloading font-icon"></i>
-                                        <a href="{{ asset('docs/planes/11-24.pdf') }}" target="_blank">
+                                        <a href="{{ asset('docs/plans/11-24.pdf') }}" target="_blank">
                                             Листопад 2024 <i class="bi bi-arrow-right icon"></i>
                                         </a>
                                     </li>
                                     <li class="list-item">
                                         <i class="flaticon-downloading font-icon"></i>
-                                        <a href="{{ asset('docs/planes/10-24.pdf') }}" target="_blank">
+                                        <a href="{{ asset('docs/plans/10-24.pdf') }}" target="_blank">
                                             Жовтень 2024 <i class="bi bi-arrow-right icon"></i>
                                         </a>
                                     </li>
                                     <li class="list-item">
                                         <i class="flaticon-downloading font-icon"></i>
-                                        <a href="{{ asset('docs/planes/09-24.pdf') }}" target="_blank">
+                                        <a href="{{ asset('docs/plans/09-24.pdf') }}" target="_blank">
                                             Вересень 2024 <i class="bi bi-arrow-right icon"></i>
                                         </a>
                                     </li>
