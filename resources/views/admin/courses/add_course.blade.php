@@ -33,7 +33,8 @@
                                 <div class="mb-3">
                                     <label for="example-select" class="form-label">Кількість годин</label>
                                     <select class="form-select" id="example-select" name="duration_hours">
-                                        <option value="2">2 (0.1 ЄТКС)</option>
+                                        <option value="2">2 (0.07 ЄТКС)</option>
+                                        <option value="4">4 (0.13 ЄТКС)</option>
                                         <option value="6">6 (0.2 ЄТКС)</option>
                                         <option value="10">10 (0.3 ЄТКС)</option>
                                         <option value="15">15 (0.5 ЄКТС)</option>

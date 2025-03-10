@@ -121,7 +121,9 @@ class CourseController extends Controller
                 $practiceText = ($course->practical_skill === '1') ? 'та практичні' : '';
 
                 if($course->duration_hours == '2') {
-                    $ects = '0.1';
+                    $ects = '0.07';
+                } elseif ($course->duration_hours == '4') {
+                    $ects = '0.13';
                 } elseif ($course->duration_hours == '6') {
                     $ects = '0.2';
                 } elseif ($course->duration_hours == '10') {
