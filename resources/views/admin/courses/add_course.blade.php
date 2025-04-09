@@ -38,6 +38,7 @@
                                         <option value="6">6 (0.2 ЄТКС)</option>
                                         <option value="10">10 (0.3 ЄТКС)</option>
                                         <option value="15">15 (0.5 ЄКТС)</option>
+                                        <option value="30">30 (1 ЄКТС)</option>
                                     </select>
                                 </div>
                             </div>
