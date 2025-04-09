@@ -130,6 +130,8 @@ class CourseController extends Controller
                     $ects = '0.3';
                 } elseif ($course->duration_hours == '15') {
                     $ects = '0.5';
+                } elseif ($course->duration_hours == '30') {
+                    $ects = '1';
                 }
 
                 // Додавання імені учасника
